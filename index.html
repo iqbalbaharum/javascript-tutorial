@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #demo {
+                font-size: 64px;
+            }
+        </style>
+    </head>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="demo"></p>
+<p id="json"></p>
+
+<script>
+    var x = 5;
+    x = x / 5;
+
+    var i = 1
+    var s = 'this is a string '
+    var b = false
+    var d = Date()
+    // Json
+    var j = {
+        count: i,
+        name: s,
+        is_active: false,
+        created_at: Date()
+    }
+
+    var arr = [j, j, j, j, j]
+
+    // array position
+    // start - 0
+    // end - arr.length - 1
+    const demoP = document.getElementById("demo")
+    var m = arr[0]
+    demoP.innerHTML = m.created_at;
+
+    // usage
+    // j.key = j['key']
+
+    var actives = '';
+
+    for(var index = 0; index < arr.length - 1; index++) {
+        actives = actives + arr[index].name
+    }
+
+    const jsonP = document.getElementById("json")
+    json.innerHTML = actives
+
+
+</script>
+
+</body>
+</html>
